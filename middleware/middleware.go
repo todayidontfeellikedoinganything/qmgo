@@ -1,10 +1,9 @@
 package middleware
 
 import (
-	"github.com/qiniu/qmgo/field"
-	"github.com/qiniu/qmgo/hook"
-	"github.com/qiniu/qmgo/operator"
-	"github.com/qiniu/qmgo/validator"
+  "github.com/qiniu/qmgo/field"
+  "github.com/qiniu/qmgo/hook"
+  "github.com/qiniu/qmgo/operator"
 )
 
 // callback define the callback function type
@@ -15,7 +14,6 @@ type callback func(doc interface{}, opType operator.OpType, opts ...interface{})
 var middlewareCallback = []callback{
 	hook.Do,
 	field.Do,
-	validator.Do,
 }
 
 // Register register callback into middleware
